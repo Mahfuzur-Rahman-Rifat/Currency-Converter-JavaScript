@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<title>Currency Converter</title>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+	<h1>Currency Converter</h1>
+	<hr>
+    <h2>Input</h2>
+
+  <div class="form">
+  	<label>Dollar</label>
+  <input type="text" oninput="dollar(this.value)" onchange="dollar(this.value)">
+
+   <label>Euro</label>
+  <input type="text" oninput="euro(this.value)" onchange="euro(this.value)">
+
+  <label>Japaneseyen</label>
+  <input type="text" oninput="japaneseyen(this.value)" onchange="japaneseyen(this.value)">
+
+  <label>Canadiandollar</label>
+  <input type="text" oninput="canadiandollar(this.value)" onchange="canadiandollar(this.value)">
+
+  <label>Taka</label>
+  <input type="text" oninput="bdt(this.value)" onchange="bdt(this.value)">
+
+ <h2>Output</h2>
+
+<label>Dollar</label>
+<input id="dollar">
+<label>Euro</label>
+<input id="euro">
+<label>Japaneseyen</label>
+<input id="japaneseyen">
+<label>Canadiandollar</label>
+<input id="canadiandollar">
+<label>Taka</label>
+<input id="bdt">
+  </div>
+</div>
+
+
+<script>
+function dollar(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("dollar").value=valNum;
+  document.getElementById("euro").value=valNum*0.89;
+  document.getElementById("japaneseyen").value=valNum*106.90;
+  document.getElementById("canadiandollar").value=valNum*1.36;
+  document.getElementById("bdt").value=valNum*85.07;
+}
+
+function euro(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("dollar").value=valNum*1.12;
+  document.getElementById("euro").value=valNum;
+  document.getElementById("japaneseyen").value=valNum*120.03;
+  document.getElementById("canadiandollar").value=valNum*1.52;
+  document.getElementById("bdt").value=valNum*95.50;
+}
+
+function japaneseyen(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("dollar").value=valNum*0.0094;
+  document.getElementById("euro").value=valNum*0.0083;
+  document.getElementById("japaneseyen").value=valNum;
+  document.getElementById("canadiandollar").value=valNum*0.013;
+  document.getElementById("bdt").value=valNum*0.80;
+}
+
+function canadiandollar(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("dollar").value=valNum*0.74;
+  document.getElementById("euro").value=valNum*0.66;
+  document.getElementById("japaneseyen").value=valNum*78.83;
+  document.getElementById("canadiandollar").value=valNum;
+  document.getElementById("bdt").value=valNum*62.71;
+}
+
+function bdt(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("dollar").value=valNum*0.012;
+  document.getElementById("euro").value=valNum*0.010;
+  document.getElementById("japaneseyen").value=valNum*1.26;
+  document.getElementById("canadiandollar").value=valNum*0.016;
+  document.getElementById("bdt").value=valNum;
+}
+</script>
+
+</body>
+</html>

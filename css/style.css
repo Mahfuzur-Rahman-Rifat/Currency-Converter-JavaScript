@@ -1,0 +1,16 @@
+
+body{
+}
+.container{
+	width: 350px;
+	margin: auto;
+	background-color: #a9dfa9;
+	overflow: hidden;
+	padding: 5px 0;
+}
+.container h1{text-align: center;margin: 0;}
+.container hr{width: 40%;}
+.container h2{text-align: center;margin: 0;}
+.form{text-align: center;}
+.form label{display: block;font-size: 18px;text-align: left;padding: 2px 0px 2px 46px;}
+.form input{width: 72%;height: 25px;}
